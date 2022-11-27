@@ -1,0 +1,32 @@
+{{>layout/header}}
+
+<main>
+    <div class="container">
+        <div class="col s12 m8 offset-m2 l6 offset-l3">
+            <div class="row valign-wrapper">
+                <div class="col s2">
+                    <img src="img/RDS.png" alt="" class="responsive-img">
+                </div>
+                <div class="col s10">
+                    <span class="black-text"><h2>Relational Database Service(RDS)</h2></span>
+                </div>
+            </div>
+        </div>
+
+
+        <!-- contents 1 -->
+        <span class="cyan-text text-darken-2"><h4>Concept</h4></span>
+        <p class="flow-text">
+            RDS는 AWS에서 제공하는 관계형 데이터베이스이다.<br>
+            자체 엔진인 Aurora를 포함해 MariaDB, ORACLE, MySQL등 다양한 DB 엔진을 지원한다.<br>
+            보통 private 서브넷에 위치시키고 필요에 따라 읽기 전용 복제본 인스턴스를 생성한다.<br>
+            개발자는 DB 관리에 필요한 여러 관리 작업 없이 애플리케이션 개발에만 집중할 수 있다.
+        </p>
+        <a class="orange-text text-darken-2" href="https://docs.aws.amazon.com/AmazonRDS/latest/UserGuide/Welcome.html">
+            <h4>Learn More</h4></a>
+        <a class="orange-text text-darken-2" href="https://aws.amazon.com/ko/rds/"><h4>Start Experience</h4></a><br>
+
+    </div>
+</main>
+
+{{>layout/footer}}

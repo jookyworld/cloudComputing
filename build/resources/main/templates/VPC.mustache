@@ -1,0 +1,33 @@
+{{>layout/header}}
+
+<main>
+    <div class="container">
+        <div class="col s12 m8 offset-m2 l6 offset-l3">
+            <div class="row valign-wrapper">
+                <div class="col s2">
+                    <img src="img/VPC.png" alt="" class="responsive-img">
+                </div>
+                <div class="col s10">
+                    <span class="black-text"><h2>Virtual Private Cloud(VPC)</h2></span>
+                </div>
+            </div>
+        </div>
+
+
+        <!-- contents 1 -->
+        <span class="cyan-text text-darken-2"><h4>Concept</h4></span>
+        <p class="flow-text">
+            VPC는 AWS의 가장 큰 네트워크 단위로 가상 네트워크 공간이다.<br>
+            VPC는 서브넷이라는 IP Block으로 분리되는데, 서브넷은 provate과 public으로 다시 구분된다.<br>
+            외부와 통신하기 위해서는 인터넷 게이트웨이를 생성해야하고 이는 public 서브넷에만 연결 가능하다.<br>
+            마지막으로 라우팅 테이블을 통해 서브넷에서 데이터가 이동할 경로를 지정한다.<br>
+            EC2와같은 서비스를 생성하면 각 리전에 대한 VPC 또한 자동으로 생성되지만 커스텀 할 수 있다.
+        </p>
+        <a class="orange-text text-darken-2"
+           href="https://docs.aws.amazon.com/vpc/latest/userguide/what-is-amazon-vpc.html"><h4>Learn More</h4></a>
+        <a class="orange-text text-darken-2" href="https://aws.amazon.com/ko/vpc/"><h4>Start Experience</h4></a><br>
+
+    </div>
+</main>
+
+{{>layout/footer}}
