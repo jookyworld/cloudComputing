@@ -1,6 +1,5 @@
 {{>layout/header}}
 
-
 <main>
     <div class="container">
         <!-- header -->
@@ -24,7 +23,6 @@
         </p>
         <hr>
         <br>
-
 
         <!-- contents 2 -->
         <span class="cyan-text text-darken-2"><h4>Cloud Service Model</h4></span>
@@ -55,60 +53,17 @@
         <hr>
         <br>
 
-
         <!-- contents 4 -->
         <span class="cyan-text text-darken-2"><h4>AWS 기능 알아보기</h4></span>
         <div class="row">
+            {{#posts}}
             <div class="col s12 m2">
                 <div class="card">
-                    <div class="card-image"><a href="/IAM"><img src="img/IAM.png"></a></div>
-                    <div class="card-name"><a>IAM</a></div>
+                    <div class="card-image"><a href="/{{id}}"><img src="img/{{title}}.png"></a></div>
+                    <div class="card-name"><a>{{title}}</a></div>
                 </div>
             </div>
-            <div class="col s12 m2">
-                <div class="card">
-                    <div class="card-image"><a href="/EC2"><img src="img/EC2.png"></a></div>
-                    <div class="card-action"><a>EC2</a></div>
-                </div>
-            </div>
-            <div class="col s12 m2">
-                <div class="card">
-                    <div class="card-image"><a href="/VPC"><img src="img/VPC.png"></a></div>
-                    <div class="card-action"><a>VPC</a></div>
-                </div>
-            </div>
-            <div class="col s12 m2">
-                <div class="card">
-                    <div class="card-image"><a href="/S3"><img src="img/S3.png"></a></div>
-                    <div class="card-action"><a>S3</a></div>
-                </div>
-            </div>
-            <div class="col s12 m2">
-                <div class="card">
-                    <div class="card-image"><a href="/ELB"><img src="img/ELB.png"></a></div>
-                    <div class="card-action"><a>ELB</a></div>
-                </div>
-            </div>
-            <div class="col s12 m2">
-                <div class="card">
-                    <div class="card-image"><a href="/EBS"><img src="img/EBS.png"></a></div>
-                    <div class="card-action"><a>EBS</a></div>
-                </div>
-            </div>
-        </div>
-        <div class="row">
-            <div class="col s12 m2">
-                <div class="card">
-                    <div class="card-image"><a href="/RDS"><img src="img/RDS.png"></a></div>
-                    <div class="card-action"><a>RDS</a></div>
-                </div>
-            </div>
-            <div class="col s12 m2">
-                <div class="card">
-                    <div class="card-image"><a href="/Lambda"><img src="img/Lambda.png"></a></div>
-                    <div class="card-action"><a>Lambda</a></div>
-                </div>
-            </div>
+            {{/posts}}
         </div>
     </div>
 </main>

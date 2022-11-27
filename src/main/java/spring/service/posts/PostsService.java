@@ -8,7 +8,6 @@ import spring.domain.posts.Posts;
 import spring.domain.posts.PostsRepository;
 import spring.web.dto.PostsListResponseDto;
 import spring.web.dto.PostsResponseDto;
-import spring.web.dto.PostsUpdateRequestDto;
 import spring.web.dto.PostsSaveRequestDto;
 
 import java.util.List;
@@ -24,14 +23,14 @@ public class PostsService {
         return postsRepository.save(requestDto.toEntity()).getId();
     }
 
-    @Transactional
-    public Long update(Long id, PostsUpdateRequestDto requestDto) {
-        Posts posts = postsRepository.findById(id).orElseThrow(
-                () -> new IllegalArgumentException("해당 게시글이 없습니다. id = "+id));
-
-        posts.update(requestDto.getTitle(), requestDto.getContent());
-        return id;
-    }
+//    @Transactional
+//    public Long update(Long id, PostsUpdateRequestDto requestDto) {
+//        Posts posts = postsRepository.findById(id).orElseThrow(
+//                () -> new IllegalArgumentException("해당 게시글이 없습니다. id = "+id));
+//
+//        posts.update(requestDto.getTitle(), requestDto.getContent());
+//        return id;
+//    }
 
     public PostsResponseDto findById(Long id) {
         Posts entity = postsRepository.findById(id).orElseThrow(

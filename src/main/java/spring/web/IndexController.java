@@ -14,11 +14,19 @@ import spring.web.dto.PostsResponseDto;
 public class IndexController {
 
     private final PostsService postsService;
+    private String localPath = "/Users/jookwonyoung/Documents/DB/cloudComputing";
 
     @GetMapping("/")
     public String index(Model model) {
-//        model.addAttribute("posts", postsService.findAllDesc());
+        model.addAttribute("posts", postsService.findAllDesc());
         return "index";
+    }
+
+    @GetMapping("/{id}")
+    public String findById (@PathVariable Long id, Model model) {
+        PostsResponseDto dto = postsService.findById(id);
+        model.addAttribute("post", dto);
+        return "contents";
     }
 
     @GetMapping("/EBS")
@@ -55,22 +63,8 @@ public class IndexController {
     }
 
 
-
-
-
-
-
-
     @GetMapping("/posts/save")
     public String postsSave() {
         return "posts-save";
-    }
-
-    @GetMapping("/posts/update/{id}")
-    public String postsUpdate(@PathVariable Long id, Model model) {
-        PostsResponseDto dto = postsService.findById(id);
-        model.addAttribute("post", dto);
-
-        return "posts-update";
     }
 }

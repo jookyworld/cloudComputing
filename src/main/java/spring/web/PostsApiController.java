@@ -5,9 +5,8 @@ import org.springframework.web.bind.annotation.*;
 import spring.service.posts.PostsService;
 import spring.web.dto.PostsResponseDto;
 import spring.web.dto.PostsSaveRequestDto;
-import spring.web.dto.PostsUpdateRequestDto;
 
-@RequiredArgsConstructor  //final 인자 생성자 생성 > 스프링Bean 주입 (롬복 어노테이션)
+@RequiredArgsConstructor
 @RestController
 public class PostsApiController {
 
@@ -18,19 +17,9 @@ public class PostsApiController {
         return postsService.save(requestDto);
     }
 
-    @PutMapping("/api/v1/posts/{id}")
-    public Long update(@PathVariable Long id, @RequestBody PostsUpdateRequestDto requestDto) {
-        return postsService.update(id, requestDto);
-    }
-
     @GetMapping("/api/v1/posts/{id}")
     public PostsResponseDto findById (@PathVariable Long id) {
         return postsService.findById(id);
     }
 
-    @DeleteMapping("/api/v1/posts/{id}")
-    public Long delete(@PathVariable Long id) {
-        postsService.delete(id);
-        return id;
-    }
 }

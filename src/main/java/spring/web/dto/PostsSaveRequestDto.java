@@ -11,20 +11,23 @@ import spring.domain.posts.Posts;
 public class PostsSaveRequestDto {
     private String title;
     private String content;
-    private String author;
+    private String url1;
+    private String url2;
 
     @Builder
-    public PostsSaveRequestDto(String title, String content, String author) {
+    public PostsSaveRequestDto(String title, String content, String url1, String url2) {
         this.title = title;
         this. content =  content;
-        this.author = author;
+        this.url1 = url1;
+        this.url2 = url2;
     }
 
     public Posts toEntity() {
         return Posts.builder()
                 .title(title)
                 .content(content)
-                .author(author)
+                .url1(url1)
+                .url2(url2)
                 .build();
     }
 }
