@@ -14,7 +14,6 @@ import spring.web.dto.PostsResponseDto;
 public class IndexController {
 
     private final PostsService postsService;
-    private String localPath = "/Users/jookwonyoung/Documents/DB/cloudComputing";
 
     @GetMapping("/")
     public String index(Model model) {
@@ -29,42 +28,8 @@ public class IndexController {
         return "contents";
     }
 
-    @GetMapping("/EBS")
-    public String EBS() {
-        return "EBS";
-    }
-    @GetMapping("/EC2")
-    public String EC2() {
-        return "EC2";
-    }
-    @GetMapping("/ELB")
-    public String ELB() {
-        return "ELB";
-    }
-    @GetMapping("/IAM")
-    public String IAM() {
-        return "IAM";
-    }
-    @GetMapping("/Lambda")
-    public String Lambda() {
-        return "Lambda";
-    }
-    @GetMapping("/RDS")
-    public String RDS() {
-        return "RDS";
-    }
-    @GetMapping("/VPC")
-    public String VPC() {
-        return "VPC";
-    }
-    @GetMapping("/S3")
-    public String S3() {
-        return "S3";
-    }
-
-
-    @GetMapping("/posts/save")
+    @GetMapping("/add")
     public String postsSave() {
-        return "posts-save";
+        return "add";
     }
 }
