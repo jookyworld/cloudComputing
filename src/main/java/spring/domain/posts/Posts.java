@@ -12,10 +12,10 @@ import javax.persistence.*;
 public class Posts{
 
     @Id
-    @GeneratedValue(strategy = GenerationType.IDENTITY) //pk 생성 규칙
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
 
-    @Column(length = 500, nullable = false) //기본값 사용x, 변경값 사용(500)
+    @Column(length = 500, nullable = false)
     private String title;
 
     @Column(columnDefinition = "TEXT")
